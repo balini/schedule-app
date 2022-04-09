@@ -4,7 +4,9 @@ Angular: 13.2.7
 <br>
 Node: 16.14.0
 <br>
-Unity tests: Jasmine, Karma
+Unity tests: Jasmine
+<br>
+Test coverage report: Karma
 <br>
 SCSS pattern: BEM methodology
 <br>
