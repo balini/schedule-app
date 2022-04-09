@@ -6,7 +6,7 @@ Node: 16.14.0
 <br>
 Unity tests: Jasmine, Karma
 <br>
-CSS pattern: BEM methodology
+SCSS pattern: BEM methodology
 
 ## Get started
 
