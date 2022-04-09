@@ -46,7 +46,7 @@ Local application: http://localhost:4200
 npm test
 ```
 
-Minimum coverage of 70% in all tests scenarios:
+Minimum coverage set to 70% in all tests scenarios:
 
 karma.conf.js
 ```shell
