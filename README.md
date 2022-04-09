@@ -1,10 +1,15 @@
 # schedule-app
 
 Angular: 13.2.7
+<br>
 Angular CLI: 13.2.6
+<br>
 Node: 16.14.0
+<br>
 Package Manager: npm 8.3.1
+<br>
 Unity tests: Jasmine, Karma
+<br>
 CSS pattern: BEM methodology
 
 ## Get started
@@ -12,7 +17,9 @@ CSS pattern: BEM methodology
 ### Clone the repo
 
 ```shell
-git clone https://github.com/balini/schedule-app.git (HTTPS) or git@github.com:balini/schedule-app.git (SSH) or gh repo clone balini/schedule-app (GitHub CLI)
+git clone https://github.com/balini/schedule-app.git (HTTPS) 
+git@github.com:balini/schedule-app.git (SSH) 
+gh repo clone balini/schedule-app (GitHub CLI)
 cd schedule-app/src/app
 ```
 
