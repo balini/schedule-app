@@ -1,0 +1,326 @@
+* {
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.professional {
+    display: flex;
+    align-items: center;
+
+    &-container {
+        width: 38vw;
+        margin: 10px 40px 0 0;
+    }
+
+    &-img {
+        border-radius: 50%;
+        width: 9vw;
+    }
+
+    &-title {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &-price {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    &-time, &-review {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    &-review {
+        margin-left: 5px;
+
+        &--container {
+            line-height: 0;
+        }
+    }
+
+    &-title, &-price, &-time, &-location, &-description, &-review  {
+        color: #726f6f;
+    }
+
+    &-subtitle {
+        color: #2786e4;
+        font-size: 13px;
+        font-weight: 600;
+
+        &--container {
+            line-height: 0;
+        }
+    }
+
+    &-info {
+        margin-left: 20px;
+    }
+}
+
+.arrow {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 0;
+    cursor: pointer;
+    background-color: lightgray;
+    padding: 11px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    transition: all 0.35s ease-in-out;
+
+    &:hover {
+        background-color: gray; 
+    }
+}
+
+.dates, .time {
+    display: grid;
+    grid-template-columns: 6.5vw 6.5vw 6.5vw 6.5vw;
+    padding: 0;
+}
+
+.time-container {
+    margin-top: 20px;
+}
+
+.dates-container, .time-container {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.session, .dates > li p, .time > li p {
+    text-align: center;
+}
+
+.session {
+    background-color: #2786e4;
+    color: white;
+    height: 10vh;
+
+    &-container {
+        width: 32vw; 
+    }
+
+    &-title {
+        line-height: 0;
+        padding-top: 23px;
+        font-size: 19px;
+    }
+    
+    &-subtitle {
+        line-height: 0;
+        font-size: 14px;
+
+        &--day {
+            line-height: 0;
+            font-size: 11px;
+            color: #393b49;
+        }
+
+        &--date {
+            line-height: 0.5;
+            font-size: 15px;
+            color: #393b49;
+        }
+
+        &--time {
+            background-color: #e8edee;
+            width: 5.8vw;
+            padding: 6px;
+            cursor: pointer;
+            color: #393b49;
+            transition: all 0.35s ease-in-out;
+
+            &:hover {
+                background-color: #aeb2b3;
+                color: whitesmoke;
+            }
+        }
+
+        &--timeless {
+            width: 5.8vw;
+            padding: 6px;
+            color: #393b49;
+        }
+    }
+
+    
+}
+
+.checked {
+    color: orange;
+}
+
+@media (max-width: 1100px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .session {
+        &-container {
+            width: 72vw;
+        }
+
+        &-subtitle--time {
+            width: 8vw;
+        }
+    }
+
+    .dates, .time {
+        display: grid;
+        grid-template-columns: 14vw 14vw 14vw 14vw;
+    }
+
+    .time {
+        margin-left: 70px;
+    }
+
+    .professional {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-description {
+            width: 54vw;
+        }
+
+        &-img {
+            width: 14vw; 
+        }
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .time {
+        margin-left: 40px;
+    }
+
+    .professional-img {
+        width: 16vw;
+    }
+
+    .session-subtitle--date, .session-subtitle--time, .session-subtitle--timeless {
+        font-size: 13px;
+    }
+
+    .session-subtitle--time {
+        width: 12vw;
+    }
+
+    .arrow {
+        font-size: 22px;
+        padding: 12px;
+    }
+
+    @media (max-width: 600px) {
+        .professional-img {
+            width: 20vw;
+        }
+
+        .arrow {
+            font-size: 25px;
+            padding: 8px;
+        }
+    }
+
+    @media (max-width: 450px) {
+
+        .professional {
+            &-img {
+                width: 26vw;
+            }
+            
+            &-location, &-review {
+                display: block;
+                line-height: 2.5;
+            }
+
+            &-title {
+                font-size: 18px;
+            }
+        }
+    }
+
+    @media (max-width: 350px) {
+
+        .professional-img {
+            width: 30vw;
+        }
+
+        .session {
+            &-container {
+                width: 90vw;
+            }
+
+            &-subtitle--time {
+                width: 16vw;
+            }
+        }
+
+        .dates, .time {
+            display: gride;
+            grid-template-columns: 18vw 18vw 18vw 18vw;
+        }
+
+        .time {
+            margin-left: 18px;
+        }
+    }
+
+    @media(max-width: 255px) {
+
+        .professional {
+            &-img {
+                width: 35vw;
+            }
+
+            &-description {
+                font-size: 14px;
+            }
+
+            &-title {
+                text-align: center;
+            }
+        }
+
+        .arrow {
+            font-size: 27px;
+            padding: 3px;
+        }
+
+        .session {
+            &-title {
+                font-size: 15px;
+            }
+
+            &-subtitle {
+                &--date {
+                    font-size: 10px; 
+                }
+
+                &--time, &--timeless {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+} 

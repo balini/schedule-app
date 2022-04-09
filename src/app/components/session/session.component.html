@@ -1,0 +1,38 @@
+<section class="session-container">
+    <section>
+        <div class="session">
+            <h1 class="session-title">Schedule your session!</h1>
+            <p class="session-subtitle">Timezone: Lisbon (+1)</p>
+        </div>
+
+        <div class="dates-container">
+            <p class="arrow">&lsaquo;</p>
+            <ul class="dates">
+                <li *ngFor="let s of schedule">
+                    <p class="session-subtitle--day" >{{ s.day }}</p>
+                    <p class="session-subtitle--date">{{ s.date }} </p>
+                </li>
+            </ul>
+            <p class="arrow">&rsaquo;</p>
+        </div>
+    </section>
+
+    <section class="time-container">
+        <ul class="time">
+          
+           <li *ngFor="let x of schedule">
+               <p class="session-subtitle--time" *ngFor="let y of x.session | slice:0:6">  
+                   <span *ngIf="!y.booked">{{ y.time }}</span>
+                   <span *ngIf="y.booked">-</span>
+                </p>
+                <div *ngIf="clicked">
+                    <p *ngFor="let y of x.session | slice:6" class="session-subtitle--time">
+                        <span *ngIf="!y.booked">{{ y.time }} </span>
+                        <span *ngIf="y.booked">-</span>
+                    </p>
+                </div>
+                <p class="session-subtitle--time" *ngIf="x.session.length >= 7" (click)="onClick()">{{ clickButton }}</p>
+            </li> 
+        </ul>
+    </section>
+</section>
