@@ -2,11 +2,7 @@
 
 Angular: 13.2.7
 <br>
-Angular CLI: 13.2.6
-<br>
 Node: 16.14.0
-<br>
-Package Manager: npm 8.3.1
 <br>
 Unity tests: Jasmine, Karma
 <br>
