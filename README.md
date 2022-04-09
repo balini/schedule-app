@@ -7,6 +7,8 @@ Node: 16.14.0
 Unity tests: Jasmine, Karma
 <br>
 SCSS pattern: BEM methodology
+<br>
+Mock API: JSON Server
 
 ## Get started
 
@@ -25,7 +27,7 @@ cd schedule-app/src/app
 npm install
 ```
 
-### Run API Mock (Json server)
+### Run Mock API
 
 ```shell
 npm run mock
