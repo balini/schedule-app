@@ -7,17 +7,22 @@ import { SessionService } from './session.service';
   templateUrl: './session.component.html',
   styleUrls: ['./session.component.scss']
 })
-export class SessionComponent implements OnInit {
+export class SessionComponent implements OnInit, AfterViewChecked {
 
   schedule: Schedule[] = [];
   firstClick: boolean = true;
   clicked: boolean = false;
   clickButton: string = 'MORE';
   
-  constructor (private sessionService: SessionService) {}
+  constructor (private sessionService: SessionService, private cd: ChangeDetectorRef) {}
 
   ngOnInit(): void {
     this.getSchedule();
+  }
+
+  ngAfterViewChecked():void {
+    this.setId();
+    this.cd.detectChanges();
   }
 
   getSchedule(): void {
@@ -26,7 +31,12 @@ export class SessionComponent implements OnInit {
     });
   }
 
-  onClick(): void {
+  onClick(event: any): void {
+    let target = event.target || event.srcElement || event.currentTarget;
+    let idAttr = target.attributes.id;
+    let idValue = idAttr.nodeValue;
+    console.log(idValue)
+
     if (this.firstClick) {
       if (!this.clicked) {
         this.clicked = true;
@@ -42,6 +52,14 @@ export class SessionComponent implements OnInit {
         this.clicked = true;
       }
     }
+  }
+
+  setId(): void {
+    let targetButtons = document.querySelectorAll('.clickButton');
+
+      targetButtons.forEach((button, index) => {
+        button.setAttribute('id', `${index}`)
+      }); 
   }
 
 }

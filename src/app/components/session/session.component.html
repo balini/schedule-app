@@ -31,7 +31,7 @@
                         <span *ngIf="y.booked">-</span>
                     </p>
                 </div>
-                <p class="session-subtitle--time" *ngIf="x.session.length >= 7" (click)="onClick()">{{ clickButton }}</p>
+                <p class="session-subtitle--time clickButton" *ngIf="x.session.length >= 7" (click)="onClick($event)">{{ clickButton }}</p>
             </li> 
         </ul>
     </section>
