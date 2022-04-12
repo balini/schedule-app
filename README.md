@@ -41,7 +41,7 @@ npm run mock
 
 GET http://localhost:3000/schedule
 
-The API was modeled considering the schedule as domain. Each element of data's API array represents a slot with an id, day, date and an array of session as attributes. Session is an entity with objects containing time of appoitment and info about availability as attributes.
+The API was modeled considering the schedule as domain. Each element of data's API array represents a slot with an id, day, date and an array of session as attributes. Session is an entity with time of appoitment and info about availability as attributes.
 
 ```shell
   {
