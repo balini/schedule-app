@@ -1,6 +1,6 @@
 # schedule-app
 
-Basic landing page that implements a calendar to schedule sessions with given professional. Available slots at the calendar comes from HTTP request to a mock rest json webservice that runs together with the app.
+Basic landing page that implements a calendar to schedule sessions with a mental health or healthcare professional. Available slots at the calendar comes from HTTP request to a mock rest json webservice that runs together with the app.
 
 ## Stack
 
