@@ -32,8 +32,7 @@ export class SessionComponent implements OnInit, AfterViewChecked {
   }
 
   onClick(event: any): void {
-    let target = event.target || event.srcElement || event.currentTarget;
-    let idAttr = target.attributes.id;
+    let idAttr = event.target.attributes.id;
     let idValue = idAttr.nodeValue;
     console.log(idValue)
 
