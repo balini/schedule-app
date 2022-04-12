@@ -20,7 +20,8 @@
     <section class="time-container">
         <ul class="time">
           
-           <li *ngFor="let x of schedule">
+            <!-- TODO: render column with same id as clicked button only -->
+           <li class="columnItens" *ngFor="let x of schedule">
                <p class="session-subtitle--time" *ngFor="let y of x.session | slice:0:6">  
                    <span *ngIf="!y.booked">{{ y.time }}</span>
                    <span *ngIf="y.booked">-</span>

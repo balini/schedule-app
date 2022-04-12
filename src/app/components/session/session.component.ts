@@ -13,6 +13,7 @@ export class SessionComponent implements OnInit, AfterViewChecked {
   firstClick: boolean = true;
   clicked: boolean = false;
   clickButton: string = 'MORE';
+  clickedButtonId: string = '';
   
   constructor (private sessionService: SessionService, private cd: ChangeDetectorRef) {}
 
@@ -21,7 +22,8 @@ export class SessionComponent implements OnInit, AfterViewChecked {
   }
 
   ngAfterViewChecked():void {
-    this.setId();
+    this.setId('.clickButton');
+    this.setId('.columnItens');
     this.cd.detectChanges();
   }
 
@@ -34,7 +36,8 @@ export class SessionComponent implements OnInit, AfterViewChecked {
   onClick(event: any): void {
     let idAttr = event.target.attributes.id;
     let idValue = idAttr.nodeValue;
-    console.log(idValue)
+    this.clickedButtonId = idValue;
+    console.log(this.clickedButtonId);
 
     if (this.firstClick) {
       if (!this.clicked) {
@@ -53,11 +56,11 @@ export class SessionComponent implements OnInit, AfterViewChecked {
     }
   }
 
-  setId(): void {
-    let targetButtons = document.querySelectorAll('.clickButton');
+  setId(element: string): void {
+    let targetElements = document.querySelectorAll(`${element}`);
 
-      targetButtons.forEach((button, index) => {
-        button.setAttribute('id', `${index}`)
+      targetElements.forEach((element, index) => {
+        element.setAttribute('id', `${index}`)
       }); 
   }
 
